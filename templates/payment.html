@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>    
+        <h2>Payment</h2>
+        <form id="payment-form">
+        <div class="form-group">
+            <label for="name">Name on Card:</label>
+            <input type="text" id="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="expiration">Expiration Date:</label>
+            <input type="text" id="expiration" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Pay Now</button>
+        </form>
+    </body>
+</html>

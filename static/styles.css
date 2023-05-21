@@ -41,6 +41,11 @@ body {
     margin: 0;
   }
   
+  .menu-item-image {
+    width: 150px;
+    height: 150px;
+  }
+
   #cart-container {
     margin-bottom: 30px;
   }

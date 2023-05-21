@@ -53,17 +53,26 @@ $(document).ready(function() {
   function displayMenu(menu) {
     const menuContainer = $('#menu-container');
     menuContainer.empty();
-
+  
     menu.forEach(item => {
-      const menuItem = $('<div class="menu-item">');
-      menuItem.append(`<h3>${item.name}</h3>`);
-      menuItem.append(`<p>${item.description}</p>`);
-      menuItem.append(`<p>Price: $${item.price}</p>`);
-      menuItem.append(`<button class="add-to-cart" data-item="${item.name}">Add to Cart</button>`);
-
+      const menuItem = $('<div class="row menu-item">'); // Added 'row' class to the menu item container
+  
+      const imageColumn = $('<div class="col-md-3">'); // Created a column for the image
+      const imageSrc = 'static/images/' + item.image; // Updated the image source path
+      imageColumn.append(`<img src="${imageSrc}" alt="${item.name}" class="menu-item-image">`);
+      menuItem.append(imageColumn);
+  
+      const detailsColumn = $('<div class="col-md-9">'); // Created a column for the item details
+      detailsColumn.append(`<h3>${item.name}</h3>`);
+      detailsColumn.append(`<p>${item.description}</p>`);
+      detailsColumn.append(`<p>Price: $${item.price}</p>`);
+      detailsColumn.append(`<button class="add-to-cart" data-item="${item.name}">Add to Cart</button>`);
+      menuItem.append(detailsColumn);
+  
       menuContainer.append(menuItem);
     });
   }
+  
 
   function addToCart(item) {
     const cartItems = $('#cart-items');

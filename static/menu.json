@@ -2,17 +2,21 @@
     {
       "name": "Pizza",
       "description": "Delicious pizza topped with cheese, pepperoni, and vegetables.",
-      "price": 10
+      "price": 10,
+      "image": "Pizza.jpg"
     },
     {
       "name": "Burger",
-      "description": "Juicy patty served with lettuce, tomato, and pickles.",
-      "price": 12
+      "description": "Juicy beef patty served with lettuce, tomato, and pickles.",
+      "price": 12,
+      "image": "Burger.jpg"
+
     },
     {
       "name": "Salad",
       "description": "Fresh mixed greens with cherry tomatoes, cucumber, and vinaigrette dressing.",
-      "price": 8
+      "price": 8,
+      "image": "Salad.jpg"
     }
   ]
   
