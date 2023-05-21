@@ -6,7 +6,7 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html")
 
-@app.route("/payment")
+@app.route("/payment",methods=['GET', 'POST'])
 def payment():
     return render_template("payment.html")
 
