@@ -1,15 +1,15 @@
-from flask import Flask, render_template, request, Response
 import cv2
-
-
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 cap = cv2.VideoCapture(0)
 
+
 @app.route("/video_capture")
 def video_capture():
     pass
+
 
 @app.route("/")
 def hello():
@@ -23,11 +23,12 @@ def read_form():
 
     return render_template("form.html")
 
-@app.route("/add_item", methods=["GET"])
+
+@app.route("/add_item", methods=["POST"])
 def add_item():
     data = request.form
     print(data)
-    return render_template("form.html", items=None)
+    return render_template("form.html", items=data['menu_item'])
 
 
 app.run(debug=True)

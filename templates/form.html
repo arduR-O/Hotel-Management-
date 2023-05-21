@@ -5,28 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Menu Form</title>
 </head>
 <body>
-    <div>
-        <form action = "{{ url_for('add_item') }}">
-            <input type="radio" id="Burger" name="Burger" value="Burger" />
-            <label for="Burger">Burger</label>
-            <input type="radio" id="Pizza" name="Pizza" value="Pizza" />
-            <label for="Pizza">Pizza</label>
-            <input type="radio" id="Salad" name="Salad" value="Salad" />
-            <label for="Salad">Salad</label>
-            <button id="Add item">Add Item</button>
-        </form>
-    </div>
+<form action="{{ url_for('add_item') }}" method = "post">
+    <input type="radio" name="menu_item" value="Burger" id="option1"/>
+    <label for="option1"> Burger </label> <br>
+    <input type="radio" name="menu_item" value="Pizza" id="option2"/>
+    <label for="option2"> Pizza </label> <br>
+    <input type="radio" name="menu_item" value="Salad" id="option3"/>
+    <label for="option3"> Salad </label> <br>
+    <button> Submit </button>
+</form>
 
-    <div id="cart-container" style="display: none;">
-      <h2>Cart</h2>
-      <ul id="cart-items">
-          <li>{{ items }}</li>
-      </ul>
-      <button id="clear-cart">Clear Cart</button>
-      <button id="checkout">Checkout</button>
-    </div>
+<h1> {{ items }}</h1>
+
 </body>
 </html>
