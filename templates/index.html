@@ -9,11 +9,13 @@
   <div class="container">
     <h1>Restaurant Menu</h1>
 
-    <div id="name-form">
+<!--    <div id="name-form">-->
+      <form action = "{{ url_for('read_form') }}" method="post">
       <label for="name-input">Enter your name:</label>
-      <input type="text" id="name-input">
+      <input type="text" id="name-input" name="name">
       <button id="name-submit">Submit</button>
-    </div>
+    </form>
+<!--    </div>-->
 
     <div id="men-container" style="display: none;"></div>
 
@@ -49,6 +51,6 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="{{ url_for('static', filename='app.js') }}"></script>
+<!--  <script src="{{ url_for('static', filename='app.js') }}"></script>-->
 </body>
 </html>
