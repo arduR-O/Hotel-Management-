@@ -16,7 +16,7 @@ $(document).ready(function() {
   });
 
   $.ajax({
-    url: 'static/menu.json',
+    url: 'static/static/menu.json',
     dataType: 'json',
     success: function(data) {
       displayMenu(data);

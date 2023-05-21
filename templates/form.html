@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu Form</title>
+</head>
+<body>
+    <div>
+        <form action = "{{ url_for('add_item') }}">
+            <input type="radio" id="Burger" name="Burger" value="Burger" />
+            <label for="Burger">Burger</label>
+            <input type="radio" id="Pizza" name="Pizza" value="Pizza" />
+            <label for="Pizza">Pizza</label>
+            <input type="radio" id="Salad" name="Salad" value="Salad" />
+            <label for="Salad">Salad</label>
+            <button id="Add item">Add Item</button>
+        </form>
+    </div>
+
+    <div id="cart-container" style="display: none;">
+      <h2>Cart</h2>
+      <ul id="cart-items">
+          <li>{{ items }}</li>
+      </ul>
+      <button id="clear-cart">Clear Cart</button>
+      <button id="checkout">Checkout</button>
+    </div>
+</body>
+</html>
