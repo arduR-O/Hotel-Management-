@@ -69,8 +69,12 @@ body {
     text-align: center;
   }
   
-  .form-group {
-    margin-bottom: 20px;
+  #container {
+    /* margin-bottom: 20px;
+    margin-left: 400px;
+    margin-right: 400px; */
+    margin: auto;
+    width: 50%;
   }
   
   .btn-primary {
@@ -92,3 +96,6 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
   }
   
+  .form-control{
+    width: 500px;
+  }
