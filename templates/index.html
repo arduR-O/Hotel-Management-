@@ -29,7 +29,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="{{ url_for('static', filename='app.js') }}"></script>
   <script>
-    // JavaScript code to redirect to payment.html when the button is clicked
     document.getElementById("proceed-to-payment").addEventListener("click", function() {
       window.location.href = "templates/payment.html";
     });
