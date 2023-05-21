@@ -16,7 +16,7 @@ $(document).ready(function() {
     });
   
     $.ajax({
-      url: 'menu.json',
+      url: 'static\menu.json',
       dataType: 'json',
       success: function(data) {
         displayMenu(data);
@@ -47,10 +47,6 @@ $(document).ready(function() {
       const expiration = $('#expiration').val().trim();
       const cvv = $('#cvv').val().trim();
   
-      // Perform payment processing here
-      // You can add your logic for handling the payment, such as connecting to a payment gateway or backend server
-  
-      // After successful payment processing, show the payment confirmation
       $('#payment-container').html('<h2>Payment Successful!</h2>');
     });
   
